@@ -51,7 +51,7 @@ textarea {
 }
 
 .container {
-    max-width: 320;
+    max-width: 320px;
     padding: 0 15px;
 }
 .section {
@@ -662,9 +662,11 @@ li:hover .overlay-text {
 .form-field {
     margin-bottom: 24px;
 }
-/* ======================================= MODAL =======================================  */
+/* ======================================= /MODAL =======================================  */
 
-@media screen and (min-resolution: 192dpi) and (max-width: 767px) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     .titel-page {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mobile@2x.jpg);
     }
@@ -771,7 +773,7 @@ li:hover .overlay-text {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 320px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -779,5 +781,308 @@ li:hover .overlay-text {
 @media screen and (min-width: 768px) {
     .menu {
         display: none;
+    }
+    .container {
+        max-width: 736px; 
+    }
+        /* =================================== HEADER-TABLET =================================  */
+    .navigation-menu {
+        display: flex;
+        gap: 40px;
+    }
+.navigation-menu-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.navigation-menu-item {
+    color: var(--NAVY-BLUE, #2e2f42);
+    font-weight: 500;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active:after {
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    content: '';
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.top-line {
+    padding: 0;
+}
+.top-line-address {
+    display: block;
+    font-style: normal;
+}
+
+.top-line-address-list {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-line-address-list:hover {
+    color: var(--OCEAN, #404bbf);
+}
+.mobile-open-btn {
+    display: none;
+}
+/* =================================== /HEADER-TABLET =================================  */
+
+/* =================================== HERO-TABLET =================================  */
+.titel-page {
+    padding: 112px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tablet.jpg);
+}
+.titel {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    max-width: 496px;
+}
+/* =================================== /HERO-TABLET =================================  */
+
+/* ================================= SECTION 1 TABLET =================================  */
+.features-section-list {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.features-section-item {
+    width: calc((100% - 24px) / 2);
+}
+.section-item-titel {
+    text-align: start;
+}
+/* ================================= /SECTION 1 TABLET =================================  */
+
+/* ================================= SECTION 2 TABLET =================================  */
+.team-section-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+}
+
+.team-section-item {
+    width: calc((100% - 24px) / 2);
+    max-width: 264px;
+}
+
+/* ================================= /SECTION 2 TABLET =================================  */
+
+/* ================================= SECTION 3 TABLET =================================  */
+.portfolio-section-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+}
+
+.portfolio-section-item {
+    width: calc((100% - 24px) / 2);
+    max-width: 356px;
+}
+/* ================================= /SECTION 3 TABLET =================================  */
+
+/* =================================== FOOTER-TABLET =================================  */
+.footer-section .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-left: 92px;
+}
+.logo-first-part-down {
+    text-align: start;
+}
+.footer-description {
+    width: 264px;
+}
+.footer-logo-block {
+    margin-right: 24px;
+}
+.footer-links .social-links {
+    display: flex;
+    gap: 16px;
+}
+.footer-subscribe .form {
+    flex-direction: row;
+    align-items: baseline;
+}
+.form-input {
+    width: 264px;
+    margin-right: 24px;
+}
+.footer-titel {
+    text-align: start;
+}
+/* =================================== /FOOTER-TABLET =================================  */
+
+/* =================================== MODAL-TABLET =================================  */
+.modal-content {
+    width: 408px;
+}
+/* =================================== /MODAL-TABLET =================================  */
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 1157px),
+screen and (min-resolution: 2dppx) and (max-width: 1157px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 1157px) {
+    .titel-page {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tablet@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    /* =================================== HEADER-DESC =================================  */
+    .address-list {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .navigation-menu-item:hover,
+    .navigation-menu-item:focus {
+    color: var(--OCEAN, #404bbf);
+    }
+    .top-line-address-list {
+    font-size: 16px;
+    }
+    .top-line-address-list:focus {
+        color: var(--OCEAN, #404bbf);
+    }
+
+    /* =================================== /HEADER-DESC =================================  */
+
+    /* =================================== HERO-DESC =================================  */
+    .titel-page {
+        padding: 188px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+        max-width: 1440px;
+    }
+
+    .titel {
+        font-size: 56px;
+        margin-bottom: 48px;
+    }
+    .titel-page-button:hover,
+    .titel-page-button:focus {
+        background: var(--OCEAN, #404bbf);
+    }
+    /* =================================== /HERO-DESC =================================  */
+
+    /* ================================= SECTION 1 DESC =================================  */
+    .features-section-list {
+        align-items: baseline;
+        flex-wrap: nowrap;
+        column-gap: 24px;
+    }
+
+    .features-section-item {
+        width: calc((100% - 72px) / 4);
+    }
+    .section-item-description {
+        font-weight: 400;
+    }
+    .section-item-titel {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+    .section-item-titel {
+        text-align: start;
+    }
+    .features-section-picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        border-radius: 4px;
+        border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+        background: var(--CLOUD, #F4F4FD);
+        margin-bottom: 8px;
+        }
+
+    /* ================================= /SECTION DESC =================================  */
+
+    /* ================================= SECTION 2 DESC =================================  */
+    .team-section-list {
+        flex-wrap: nowrap;
+    }
+
+    .team-section-item {
+        width: calc((100% - 72px) / 4);
+    }
+    .social-links .link:hover, .social-links .link:focus {
+        background-color: var(--OCEAN, #404BBF);
+    }
+    /* ================================= /SECTION 2 DESC =================================  */
+
+    /* ================================= SECTION 3 DESC =================================  */
+    .portfolio-section-list {
+        row-gap: 48px;
+    }
+
+    .portfolio-section-item {
+        width: calc((100% - 48px) / 3);
+        max-width: 360px;
+        cursor: pointer;
+    }
+
+    /* ================================= /SECTION 3 DESC =================================  */
+
+    /* =================================== FOOTER-DESC =================================  */
+    .footer-section .container {
+        padding-left: 15px;
+    }
+    .footer-logo-block {
+        margin-right: 120px;
+    }
+    .footer-links {
+        margin-right: 80px;
+    }
+    .footer-links .link:hover,
+    .footer-links .link:focus {
+     background-color: var(--GREEN, #31D0AA);
+    }
+
+    /* =================================== FOOTER-DESC =================================  */
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+    .titel-page {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
     }
 }
